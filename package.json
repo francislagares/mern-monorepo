@@ -14,6 +14,8 @@
     "server": "yarn workspace @nasa-project/server start:dev",
     "client": "yarn workspace @nasa-project/client start",
     "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\"",
+    "test:watch": "jest --watchAll --no-cache",
+    "test:ci": "jest",
     "build-server": "yarn workspace @nasa-project/server build",
     "build-client": "yarn workspace @nasa-project/client build",
     "deploy": "concurrently --kill-others-on-fail \"yarn build-client\"  \"yarn server\"",

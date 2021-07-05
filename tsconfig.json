@@ -27,7 +27,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react",
     "sourceMap": true,
     "removeComments": true,
     "downlevelIteration": true

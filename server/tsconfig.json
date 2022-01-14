@@ -1,29 +1,9 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "target": "es2021",
     "module": "commonjs",
     "rootDir": "./src",
-    "outDir": "./build",
-    "moduleResolution": "node",
-    "baseUrl": "./src",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "lib": ["dom", "esnext", "es2018"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "downlevelIteration": true
-  },
+    "outDir": "./build",  },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "coverage", "build"]
 }

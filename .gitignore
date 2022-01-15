@@ -1,6 +1,13 @@
 # dependencies
-node_modules/
+/node_modules
 /.pnp
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
 .pnp.js
 
 # testing

@@ -1,0 +1,36 @@
+{
+  "extends": ["stylelint-config-standard", "stylelint-a11y/recommended"],
+  "plugins": ["stylelint-a11y", "stylelint-order"],
+  "rules": {
+    "number-leading-zero": "never",
+    "custom-property-pattern": null,
+    "a11y/font-size-is-readable": true,
+    "a11y/no-text-align-justify": true,
+    "a11y/no-obsolete-element": true,
+    "a11y/no-obsolete-attribute": true,
+    "a11y/content-property-no-static-value": true,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": ["left"]
+      }
+    ],
+    "order/properties-order": [
+      "top",
+      "bottom",
+      "right",
+      "left",
+      "width",
+      "height",
+      "margin",
+      "padding",
+      "color",
+      "text-align",
+      "text-decoration",
+      "font-size",
+      "font-weight",
+      "border",
+      "border-radius"
+    ]
+  }
+}

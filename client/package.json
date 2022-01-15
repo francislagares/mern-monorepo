@@ -19,6 +19,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "devDependencies": {
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^14.2.0",
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-order": "^5.0.0"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -36,5 +43,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "proxy": "http://localhost:5000"
 }

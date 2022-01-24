@@ -12,6 +12,9 @@ This repository is built with Yarn workspaces and contains API Node.js Server an
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/francislagares/mern-monorepo/Tests?style=for-the-badge&labelColor=black&logo=github)
 
+[![Github all releases](https://img.shields.io/github/downloads/francislagares/rest-node-server/total.svg?style=for-the-badge&labelColor=black)](https://github.com/francislagares/rest-node-server/releases/)
+
+
 ## Packages
 
 - [x] Express.js 4.17.2

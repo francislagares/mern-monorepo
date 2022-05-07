@@ -1,4 +1,6 @@
-module.exports = {
+import type { Config } from '@jest/types';
+
+const config: Config.InitialOptions = {
   globals: {
     'ts-jest': {
       tsconfig: 'tsconfig.json',
@@ -21,3 +23,5 @@ module.exports = {
   projects: ['<rootDir>'],
   coverageDirectory: '<rootDir>/coverage/',
 };
+
+export default config;

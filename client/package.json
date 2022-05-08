@@ -1,15 +1,15 @@
 {
   "name": "@mern-monorepo/client",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.1.1",
+    "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.1.1",
-    "@types/react": "^18.0.7",
-    "@types/react-dom": "^18.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "prettier-stylelint": "^0.4.2",
-    "stylelint": "^14.7.1",
+    "stylelint": "^14.8.2",
     "stylelint-a11y": "^1.2.3",
     "stylelint-config-standard": "^25.0.0",
     "stylelint-order": "^5.0.0"
@@ -43,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "engines": {
+    "node": ">=16.15.0",
+    "npm": ">=8.5.0"
   }
 }

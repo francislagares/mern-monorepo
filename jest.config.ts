@@ -11,7 +11,6 @@ const config: Config.InitialOptions = {
     '^.+\\.(ts|tsx)$': 'ts-jest',
   },
   testMatch: ['**/src/**/*.test.ts', '**/src/**/*.test.tsx'],
-  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/client/src/setupTests.ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,

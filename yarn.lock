@@ -3578,7 +3578,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mern-monorepo/client@workspace:client":
+"@mern-monorepo/client@workspace:^, @mern-monorepo/client@workspace:client":
   version: 0.0.0-use.local
   resolution: "@mern-monorepo/client@workspace:client"
   dependencies:
@@ -13637,6 +13637,7 @@ __metadata:
   dependencies:
     "@commitlint/cli": ^16.2.4
     "@commitlint/config-conventional": ^16.2.4
+    "@mern-monorepo/client": "workspace:^"
     "@types/jest": ^27.5.1
     "@types/node": ^17.0.32
     "@typescript-eslint/eslint-plugin": ^5.23.0

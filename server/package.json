@@ -7,7 +7,8 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "nodemon --watch './**/*.ts' --exec 'ts-node' src/server.ts",
-    "start": "tsc && node build/server.js"
+    "start": "tsc && node build/server.js",
+    "test": "jest"
   },
   "dependencies": {
     "cors": "^2.8.5",

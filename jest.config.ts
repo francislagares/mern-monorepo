@@ -19,7 +19,10 @@ const config: Config.InitialOptions = {
     '\\.(css|scss|sass)$': 'identity-obj-proxy',
   },
   verbose: true,
-  projects: ['<rootDir>'],
+  projects: [
+    '<rootDir>/server/jest.config.ts',
+    '<rootDir>/client/jest.config.ts',
+  ],
   coverageDirectory: '<rootDir>/coverage/',
 };
 

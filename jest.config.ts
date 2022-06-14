@@ -15,9 +15,6 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverage: true,
   coveragePathIgnorePatterns: ['(test/.*.mock).(jsx?|tsx?)$'],
-  moduleNameMapper: {
-    '\\.(css|scss|sass)$': 'identity-obj-proxy',
-  },
   verbose: true,
   projects: [
     '<rootDir>/server/jest.config.ts',

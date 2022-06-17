@@ -1,6 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import morgan from 'morgan';
+import helmet from 'helmet';
+import compression from 'compression';
+
 import indexRouter from '../routes';
 
 const app = express();
@@ -11,10 +13,11 @@ app.use(
     origin: 'http://localhost:3000',
   }),
 );
-app.use(morgan('combined'));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(helmet());
+app.use(compression());
 
 // Routes...
 app.use('/', indexRouter);

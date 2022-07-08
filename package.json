@@ -30,7 +30,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@mern-monorepo/client": "workspace:^",
     "@types/jest": "^28.1.4",
-    "@types/node": "^18.0.1",
+    "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
     "@typescript-eslint/parser": "^5.30.5",
     "commitizen": "^4.2.4",

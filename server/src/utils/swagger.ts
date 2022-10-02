@@ -1,7 +1,7 @@
 import { Express, Request, Response } from 'express';
 import swaggerJSDoc, { OAS3Definition, OAS3Options } from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import logger from '../utils/logger';
+import logger from '@/utils/logger';
 
 const swaggerDefinition: OAS3Definition = {
   openapi: '3.0.1',

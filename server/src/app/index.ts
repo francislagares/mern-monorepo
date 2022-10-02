@@ -1,9 +1,10 @@
+import 'module-alias/register';
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
 
-import indexRouter from '../routes';
+import indexRouter from '@/routes/indexRouter';
 
 const app = express();
 

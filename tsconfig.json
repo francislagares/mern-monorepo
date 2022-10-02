@@ -22,10 +22,15 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
     "sourceMap": true,
     "removeComments": true,
-    "downlevelIteration": true
+    "downlevelIteration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "server/src/*", "client/src/*"
+      ]
+    },
   },
-  "exclude": ["node_modules", "**/node_modules/*", "dist"]
+  "exclude": ["node_modules", "**/node_modules/*", "build"]
 }

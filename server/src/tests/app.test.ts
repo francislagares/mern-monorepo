@@ -3,6 +3,8 @@ import { app } from '@/app';
 
 describe('App Index', () => {
   test('[GET] / with response statusCode 200', async () => {
-    await request(app).get('/').expect(200);
+    const response = await request(app).get('/');
+
+    expect(response.statusCode).toBe(200);
   });
 });

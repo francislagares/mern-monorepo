@@ -32,5 +32,6 @@
       ]
     },
   },
+  "include": [ "**/*.ts", "**/*.tsx", "lint-staged.config.js"],
   "exclude": ["node_modules", "**/node_modules/*", "**/build/*"]
 }

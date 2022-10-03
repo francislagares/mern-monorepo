@@ -1,4 +1,4 @@
-import './App.styles.css';
+import '@/App.styles.css';
 
 const App = (): JSX.Element => {
   return (

@@ -1,4 +1,4 @@
-import { Express, Request, Response } from 'express';
+import { Express, Request, RequestHandler, Response } from 'express';
 import swaggerJSDoc, { OAS3Definition, OAS3Options } from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 import logger from '@/utils/logger';
@@ -25,7 +25,11 @@ const swaggerSpec = swaggerJSDoc(swaggerOptions);
 
 export const swaggerDocs = (app: Express, port: number) => {
   // Swagger page
-  app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+  app.use(
+    '/docs',
+    swaggerUi.serve as unknown as RequestHandler,
+    swaggerUi.setup(swaggerSpec) as RequestHandler,
+  );
 
   // Docs in JSON format
   app.get('/docs.json', (_req: Request, res: Response) => {

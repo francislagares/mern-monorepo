@@ -1,5 +1,5 @@
 import 'module-alias/register';
-import express from 'express';
+import express, { RequestHandler } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import compression from 'compression';
@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(helmet());
-app.use(compression());
+app.use(compression() as RequestHandler);
 
 // Routes...
 app.use('/', indexRouter);

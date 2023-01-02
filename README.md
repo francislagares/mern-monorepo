@@ -9,18 +9,17 @@ This repository is built with Yarn workspaces and contains API Node.js Server an
 - Express: A Fast, unopinionated, minimalist web framework for Node.js
 - React: A JavaScript front-end library for building user interfaces
 
-
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/francislagares/mern-monorepo/Tests?style=for-the-badge&labelColor=black&logo=github)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/francislagares/mern-monorepo/tests.yaml?style=for-the-badge)
 
 [![Github all releases](https://img.shields.io/github/downloads/francislagares/rest-node-server/total.svg?style=for-the-badge&labelColor=black)](https://github.com/francislagares/rest-node-server/releases/)
 
 
 ## Packages
 
-- [x] Express.js 4.18.1
-- [x] React 18.1.0
-- [x] React-dom 18.1.0
-- [x] React Router 6
+- [x] Express.js 4.18.2
+- [x] React 18.2.0
+- [x] React-dom 18.2.0
+- [x] React Router 6.6
 
 ## Tooling
 

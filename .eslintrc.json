@@ -13,7 +13,7 @@
     "browser": true,
     "serviceworker": true
   },
-  "plugins": ["@typescript-eslint", "jest", "prettier"],
+  "plugins": ["@typescript-eslint", "import", "jest", "prettier"],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -30,6 +30,36 @@
     "prefer-const": "error",
     "max-lines-per-function": ["warn", 40],
     "no-shadow": "off",
+
+    // eslint-plugin-import rules
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/default": "error",
+    "import/export": "error",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          ["builtin"],
+          ["external"],
+          ["parent", "internal", "sibling", "index", "unknown"]
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "builtin",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ],
+    "import/extensions": ["error", "never"],
     "prettier/prettier": "error"
   }
 }

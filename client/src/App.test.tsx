@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import App from '@/App';
+import { describe } from 'vitest';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const heading = screen.getByRole('heading');
-  expect(heading).toBeInTheDocument();
+import App from './App';
+
+describe('App', () => {
+  test('renders without crashing', () => {
+    render(<App />);
+
+    const heading = screen.getByRole('heading');
+
+    expect(heading).toBeVisible();
+    expect(heading).toHaveTextContent('Vite + React');
+
+    // screen.debug();
+  });
 });

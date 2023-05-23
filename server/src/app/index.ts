@@ -1,8 +1,8 @@
 import 'module-alias/register';
-import express, { RequestHandler } from 'express';
-import cors from 'cors';
-import helmet from 'helmet';
 import compression from 'compression';
+import cors from 'cors';
+import express, { RequestHandler } from 'express';
+import helmet from 'helmet';
 
 import indexRouter from '@/routes/indexRouter';
 

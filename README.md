@@ -1,4 +1,4 @@
-![Image](https://i.imgur.com/GFf41dB.png)
+![Image](https://res.cloudinary.com/chatty-app/image/upload/v1684787771/github-banners/mern_tvu7kz.webp)
 
 # MERN Monorepo Starter
 

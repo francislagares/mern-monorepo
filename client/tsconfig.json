@@ -4,5 +4,6 @@
     "jsx": "react-jsx",
     "module": "esnext"
   },
+  "types": ["vitest/globals"],
   "include": ["./src/**/*.ts", "./src/**/*.tsx"]
 }

@@ -9,7 +9,7 @@
     "start:dev": "nodemon",
     "start": "node build/server.js",
     "build": "tsc && tsc-alias",
-    "test": "jest"
+    "test": "vitest run"
   },
   "dependencies": {
     "compression": "^1.7.4",

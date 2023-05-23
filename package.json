@@ -14,10 +14,12 @@
     "server": "yarn workspace @mern-monorepo/server start:dev",
     "client": "yarn workspace @mern-monorepo/client dev",
     "start": "concurrently --kill-others-on-fail \"yarn server\"  \"yarn client\"",
-    "test:watch": "jest --watchAll --no-cache",
+    "test:ci": "vitest run",
+    "test:watch": "vitest watch --ui",
+    "test:coverage": "vitest run --coverage",
     "test:api": "yarn workspace @mern-monorepo/server test",
     "test:client": "yarn workspace @mern-monorepo/client test",
-    "test:ci": "jest",
+    "e2e:client": "yarn workspace @mern-monorepo/client cypress:run",
     "build-server": "yarn workspace @mern-monorepo/server build",
     "build-client": "yarn workspace @mern-monorepo/client build",
     "deploy": "concurrently --kill-others-on-fail \"yarn build-client\"  \"yarn server\"",
@@ -45,6 +47,7 @@
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
+    "vite": "^4.3.8",
     "vitest": "^0.31.1"
   },
   "config": {

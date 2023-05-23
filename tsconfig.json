@@ -1,37 +1,38 @@
 {
   "compilerOptions": {
+    /* Project Setup */
     "target": "es2022",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": ["dom", "esnext", "es2022"],
+    "jsx": "react-jsx",
     "allowJs": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
+    "outDir": "./dist",
+    "sourceMap": true,
+    "removeComments": true,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+
+    /* Module Resolution */
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["server/src/*", "client/src/*"]
+    },
+
+    /* Linter Checks */
+    "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "jsx": "react-jsx",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "sourceMap": true,
-    "removeComments": true,
-    "downlevelIteration": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "server/src/*", "client/src/*"
-      ]
-    },
+
+    /* Experimental Options */
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [ "**/*.ts", "**/*.tsx", "lint-staged.config.js"],
+  "types": ["vitest/globals"],
+  "include": ["**/*.ts", "**/*.tsx", "lint-staged.config.js"],
   "exclude": ["node_modules", "**/node_modules/*", "**/build/*"]
 }

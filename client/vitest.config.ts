@@ -4,9 +4,9 @@ import path from 'path';
 import react from '@vitejs/plugin-react';
 import svgrPlugin from 'vite-plugin-svgr';
 import viteTsconfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
+import { defineProject } from 'vitest/config';
 
-export default defineConfig({
+export default defineProject({
   plugins: [react(), viteTsconfigPaths(), svgrPlugin()],
   server: {
     watch: {
@@ -17,14 +17,10 @@ export default defineConfig({
     port: 5173, // you can replace this port with any port
   },
   test: {
+    name: 'client',
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/setupTests.ts',
-    coverage: {
-      provider: 'c8',
-      reporter: ['text', 'html'],
-      exclude: ['node_modules/', 'src/setupTests.ts'],
-    },
   },
   resolve: {
     alias: {

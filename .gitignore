@@ -11,6 +11,7 @@ node_modules/
 .pnp.js
 
 # testing
+videos
 /coverage
 
 # production

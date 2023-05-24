@@ -2975,6 +2975,7 @@ __metadata:
     "@vitest/ui": ^0.31.1
     c8: ^7.13.0
     cypress: ^12.12.0
+    cypress-vite: ^1.4.0
     eslint-plugin-jest-dom: ^4.0.3
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-react-hooks: ^4.6.0
@@ -8092,6 +8093,18 @@ __metadata:
   dependencies:
     array-find-index: ^1.0.1
   checksum: 1f59fe10b5339b54b1a1eee110022f663f3495cf7cf2f480686e89edc7fa8bfe42dbab4b54f85034bc8b092a76cc7becbc2dad4f9adad332ab5831bec39ad540
+  languageName: node
+  linkType: hard
+
+"cypress-vite@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "cypress-vite@npm:1.4.0"
+  dependencies:
+    chokidar: ^3.5.3
+    debug: ^4.3.4
+  peerDependencies:
+    vite: ^2.9.0 || ^3.0.0 || ^4.0.0
+  checksum: 4a5b673c1c2e7b7f78861ee93e7282092d5e0e2dfe9d1d8313e9e09f63c60198b5ac846cb8baf3bc85b0b0b88ba440d216e1f495bf3ad256f3700c46ed77e1c1
   languageName: node
   linkType: hard
 

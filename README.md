@@ -11,8 +11,6 @@ This repository is built with Yarn workspaces and contains API Node.js Server an
 
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/francislagares/mern-monorepo/tests.yaml?style=for-the-badge)
 
-[![Github all releases](https://img.shields.io/github/downloads/francislagares/rest-node-server/total.svg?style=for-the-badge&labelColor=black)](https://github.com/francislagares/rest-node-server/releases/)
-
 
 ## Packages
 

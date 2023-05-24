@@ -15,6 +15,8 @@ node_modules/
 
 # production
 build
+dist
+logs
 
 # misc
 .DS_Store
@@ -24,6 +26,15 @@ build
 .env.production.local
 .eslintcache
 
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# MongoDB replica sets
+mongodb_cluster
+
+# Redis Volumes
+redis_data

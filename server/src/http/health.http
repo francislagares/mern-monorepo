@@ -1,0 +1,6 @@
+
+@baseURL = http://localhost:4000
+
+###
+# Find All Users
+GET {{ baseURL }}/api/v1/health

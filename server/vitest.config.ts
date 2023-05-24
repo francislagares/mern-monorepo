@@ -1,8 +1,7 @@
+import { defineConfig } from 'vitest/config';
 import path from 'path';
-
 /// <reference types="vitest" />
 import viteTsconfigPaths from 'vite-tsconfig-paths';
-import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   plugins: [viteTsconfigPaths()],

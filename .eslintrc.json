@@ -13,11 +13,10 @@
     "browser": true,
     "serviceworker": true
   },
-  "plugins": ["@typescript-eslint", "import", "jest", "prettier"],
+  "plugins": ["@typescript-eslint", "import", "prettier"],
   "extends": [
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:jest/recommended",
     "prettier"
   ],
   "rules": {

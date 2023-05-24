@@ -1,20 +1,31 @@
-import { app } from './app';
+import { App } from '@/app';
+import express from 'express';
 import logger from './utils/logger';
-import swaggerDocs from './utils/swagger';
 
-const createServer = async () => {
-  try {
-    // Start the server
-    const PORT = 8000;
-    // Binding Heroku to 0.0.0.0 instead of localhost
-    app.listen(PORT, '0.0.0.0', () => {
-      logger.info(`Server listening on port ${PORT}`);
+export class Server {
+  public init() {
+    const httpServer = new App(express());
 
-      swaggerDocs(app, PORT);
-    });
-  } catch (error) {
-    console.log(error);
+    httpServer.start();
   }
-};
+}
+const server = new Server();
 
-createServer();
+server.init();
+
+process.on('SIGINT', () => {
+  logger.info('SIGNINT received');
+  // shutdown the server gracefully
+  process.exit(0); // then exit
+});
+
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM received');
+  // shutdown the server gracefully
+  process.exit(0); // then exit
+});
+
+process.on('uncaughtException', err => {
+  logger.info('uncaughtException', err);
+  process.exit(1);
+});

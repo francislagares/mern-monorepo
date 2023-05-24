@@ -1,0 +1,64 @@
+version: "3.9"
+
+networks:
+  mongodb-cluster-net:
+
+services:
+  mongo0:
+    image: mongo
+    container_name: mongo0
+    command: >
+      mongod
+      --replSet rs0
+      --bind_ip localhost,mongo0
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+    volumes:
+      - ./mongodb_cluster/db0:/data/db
+    networks:
+      - mongodb-cluster-net
+
+  mongo1:
+    image: mongo
+    container_name: mongo1
+    command: >
+      mongod
+      --replSet rs0
+      --bind_ip localhost,mongo1
+    ports:
+      - 27018:27017
+    restart: unless-stopped
+    volumes:
+      - ./mongodb_cluster/db1:/data/db
+    networks:
+      - mongodb-cluster-net
+
+  mongo2:
+    image: mongo
+    container_name: mongo2
+    command: >
+      mongod
+      --replSet rs0
+      --bind_ip localhost,mongo2
+    ports:
+      - 27019:27017
+    restart: unless-stopped
+    volumes:
+      - ./mongodb_cluster/db2:/data/db
+    networks:
+      - mongodb-cluster-net
+
+  mongo-rs-init:
+    image: mongo
+    container_name: mongo-rs-init
+    depends_on:
+      - mongo0
+      - mongo1
+      - mongo2
+    entrypoint: ["bash", "replica_set_init.sh"]
+    restart: on-failure
+    volumes:
+      - ./scripts/replica_set_init.sh:/usr/local/bin/replica_set_init.sh:ro
+    networks:
+      - mongodb-cluster-net

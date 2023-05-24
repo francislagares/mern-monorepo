@@ -30,9 +30,13 @@
     "noImplicitReturns": true,
 
     /* Experimental Options */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    /* Advanced Options */
     "forceConsistentCasingInFileNames": true
   },
   "types": ["vitest/globals"],
-  "include": ["**/*.ts", "**/*.tsx", "lint-staged.config.js"],
-  "exclude": ["node_modules", "**/node_modules/*", "**/build/*"]
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "**/node_modules/*", "**/dist/*"]
 }

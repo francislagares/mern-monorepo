@@ -1,0 +1,11 @@
+# [GET] healthcheck
+  /health:
+    get:
+      tags:
+      - health
+      summary: Responds if the app is up and running
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'

@@ -53,6 +53,11 @@
             "pattern": "react",
             "group": "builtin",
             "position": "before"
+          },
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "before"
           }
         ],
         "pathGroupsExcludedImportTypes": ["builtin"]

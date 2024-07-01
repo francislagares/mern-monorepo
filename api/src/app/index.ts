@@ -1,18 +1,18 @@
 import {
-  BASE_URL,
-  CLIENT_URL,
-  CREDENTIALS,
-  HOST,
-  NODE_ENV,
-  ORIGIN,
-  PORT,
-} from '@/config/environment';
+    BASE_URL,
+    CLIENT_URL,
+    CREDENTIALS,
+    HOST,
+    NODE_ENV,
+    ORIGIN,
+    PORT,
+} from 'api/src/config/environment';
 import { Application, json, urlencoded } from 'express';
 
-import { MongoDBInstance as dbConnection } from '@/config/database';
-import { ErrorMiddleware } from '@/libs/shared/middlewares/error.middleware';
-import applicationRoutes from '@/routes/index';
-import logger from '@/utils/logger';
+import { MongoDBInstance as dbConnection } from 'api/src/config/database';
+import { ErrorMiddleware } from 'api/src/libs/shared/middlewares/error.middleware';
+import applicationRoutes from 'api/src/routes/index';
+import logger from 'api/src/utils/logger';
 import compression from 'compression';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';

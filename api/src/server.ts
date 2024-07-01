@@ -1,6 +1,6 @@
-import { App } from '@/app';
 import express from 'express';
 import logger from './utils/logger';
+import { App } from './app';
 
 export class Server {
   public init() {

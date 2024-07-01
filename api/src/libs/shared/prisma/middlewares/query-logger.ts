@@ -1,5 +1,5 @@
-import logger from '@/utils/logger';
 import { Prisma } from '@prisma/client';
+import logger from 'api/src/utils/logger';
 
 export const queryLogger: Prisma.Middleware = async (params, next) => {
   const before = Date.now();

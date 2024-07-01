@@ -1,8 +1,8 @@
-![Image](https://res.cloudinary.com/chatty-app/image/upload/v1684787771/github-banners/mern_tvu7kz.webp)
+![Image](https://res.cloudinary.com/jobber-app/image/upload/v1684787771/github-banners/mern_tvu7kz.webp)
 
 # MERN Monorepo Starter
 
-This repository is built with Yarn workspaces and contains API Node.js Server and React Frontend UI .
+This repository is built with pnpm workspaces and contains API Node.js Server and React Frontend UI .
 
 - Node.js: Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. Node.js brings JavaScript to the server
 - MongoDB: A document-based open source database
@@ -29,7 +29,7 @@ This repository is built with Yarn workspaces and contains API Node.js Server an
 
 ## Monorepo
 
-- [x] Yarn workspaces
+- [x] Pnpm workspaces
 
 ## Usage
 <br />
@@ -42,10 +42,10 @@ git clone git@github.com:francislagares/mern-monorepo.git
 cd mern-monorepo
 
 # install required dependencies
-yarn
+pnpm install
 
 # run by
-yarn start
+pnpm start
 ```
 <br />
 

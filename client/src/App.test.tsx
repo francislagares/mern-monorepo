@@ -14,6 +14,5 @@ describe('App', () => {
     expect(heading).toBeVisible();
     expect(heading).toHaveTextContent('Vite + React');
 
-    // screen.debug();
   });
 });

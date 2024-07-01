@@ -19,15 +19,16 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["server/src/*", "client/src/*"]
+      "@/*": ["api/src/*", "client/src/*"]
     },
 
     /* Linter Checks */
-    "noFallthroughCasesInSwitch": true,
+    "strict": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
 
     /* Experimental Options */
     "emitDecoratorMetadata": true,
@@ -37,7 +38,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "types": ["vitest/globals"],
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "api/vitest.config.mts", "client/vitest.config.mts", "vitest.config.mts", "vitest.workspace.mts"],
   "exclude": [
     "node_modules",
     "**/node_modules/*",

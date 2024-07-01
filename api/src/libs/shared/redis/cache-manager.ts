@@ -1,4 +1,4 @@
-import { REDIS_HOST, REDIS_PORT, REDIS_TTL } from '@/config/environment';
+import { REDIS_HOST, REDIS_PORT, REDIS_TTL } from 'api/src/config/environment';
 
 import Redis from 'ioredis';
 

@@ -1,8 +1,8 @@
 import express, { Application } from 'express';
 import { expect } from 'vitest';
 
-import { App } from '@/app';
-import HealthController from '@/controllers/health.controller';
+import { App } from 'api/src/app';
+import HealthController from 'api/src/controllers/health.controller';
 import request from 'supertest';
 
 describe('HealthController', () => {

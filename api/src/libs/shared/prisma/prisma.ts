@@ -1,4 +1,5 @@
 import { PrismaClient } from '@prisma/client';
+
 import { queryLogger } from './middlewares/query-logger';
 
 let database: PrismaClient;

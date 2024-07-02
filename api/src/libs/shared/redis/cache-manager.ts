@@ -1,6 +1,6 @@
-import { REDIS_HOST, REDIS_PORT, REDIS_TTL } from 'api/src/config/environment';
-
 import Redis from 'ioredis';
+
+import { REDIS_HOST, REDIS_PORT, REDIS_TTL } from 'api/src/config/environment';
 
 export class CacheManager {
   private redis: Redis;

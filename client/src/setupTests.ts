@@ -2,7 +2,6 @@ import * as matchers from '@testing-library/jest-dom/matchers';
 import { cleanup } from '@testing-library/react';
 import { afterEach, beforeAll, expect, vi } from 'vitest';
 
-
 // mocking methods which are not implemented in JSDOM
 beforeAll(() => {
   // extends Vitest's expect method with methods from react-testing-library

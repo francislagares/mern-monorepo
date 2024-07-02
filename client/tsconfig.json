@@ -4,6 +4,6 @@
     "jsx": "react-jsx",
     "module": "esnext"
   },
-  
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "@testing-library/jest-dom"]
 }

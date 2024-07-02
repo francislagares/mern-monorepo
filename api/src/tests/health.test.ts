@@ -1,9 +1,9 @@
 import express, { Application } from 'express';
-import { expect } from 'vitest';
+import request from 'supertest';
+import { beforeAll, describe, expect, it } from 'vitest';
 
 import { App } from 'api/src/app';
 import HealthController from 'api/src/controllers/health.controller';
-import request from 'supertest';
 
 describe('HealthController', () => {
   let app: Application;
@@ -17,6 +17,7 @@ describe('HealthController', () => {
 
   it('GET /health should return status 200 and { health: "OK!" } when GET /health', async () => {
     const response = await request(app).get('/health');
+
     expect(response.status).toEqual(200);
     expect(response.body).toEqual({ health: 'OK!' });
   });

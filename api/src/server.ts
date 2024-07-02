@@ -1,6 +1,7 @@
 import express from 'express';
-import logger from './utils/logger';
+
 import { App } from './app';
+import logger from './utils/logger';
 
 export class Server {
   public init() {

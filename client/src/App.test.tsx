@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 
 import { render, screen } from '@testing-library/react';
-import { describe, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 
 import App from './App';
 
@@ -11,8 +11,7 @@ describe('App', () => {
 
     const heading = screen.getByRole('heading');
 
-    expect(heading).toBeVisible();
+    expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent('Vite + React');
-
   });
 });

@@ -1,0 +1,35 @@
+FROM node:alpine AS builder
+
+RUN apk update && apk add --no-cache nodejs && corepack enable
+RUN addgroup mern && adduser -S -G mern api
+
+USER api
+
+WORKDIR /api
+
+COPY package.json tsconfig.json ./
+COPY src ./
+
+RUN pnpm ci && pnpm build
+
+
+FROM node:alpine
+
+RUN apk update && apk add --no-cache nodejs && corepack enable
+RUN addgroup mern && adduser -S -G mern api
+
+USER api
+
+WORKDIR /api
+
+COPY package.json tsconfig.json ./
+COPY src ./
+
+RUN pnpm add -g pm2
+RUN pnpm ci && pnpm build
+RUN pnpm ci --production
+COPY --from=builder /api/build ./build
+
+EXPOSE 4000
+
+CMD [ "pnpm", "start" ]

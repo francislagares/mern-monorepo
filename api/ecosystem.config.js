@@ -27,7 +27,7 @@ module.exports = {
     },
     {
       name: 'dev', // pm2 start App name
-      script: '../node_modules/.bin/ts-node', // ts-node
+      script: './node_modules/.bin/ts-node', // ts-node
       args: '-r tsconfig-paths/register --transpile-only src/server.ts', // ts-node args
       exec_mode: 'cluster', // 'cluster' or 'fork'
       instance_var: 'INSTANCE_ID', // instance variable

@@ -1,0 +1,20 @@
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+    volumes:
+      - mongodb:/data/db
+    networks:
+      - mern
+
+volumes:
+  mongodb:
+    name: mongodb
+    driver: local
+
+networks:
+  mern:
+    name: mern

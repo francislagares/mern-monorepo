@@ -1,0 +1,25 @@
+# Stage 1: Development environment
+FROM node:alpine
+
+RUN apk update && apk add --no-cache nodejs && corepack enable
+RUN addgroup mern && adduser -S -G mern francis
+
+USER francis
+
+WORKDIR /app
+
+COPY package.json .
+
+USER root
+
+RUN chown -R francis:mern .
+
+USER francis
+
+RUN pnpm install
+
+COPY . .
+
+EXPOSE 5173
+
+CMD ["pnpm", "dev"]

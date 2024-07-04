@@ -1,0 +1,18 @@
+services:
+  client:
+    container_name: client
+    image: client/v1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    networks:
+      - mern
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+networks:
+  mern:
+    name: mern

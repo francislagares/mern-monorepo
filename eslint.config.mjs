@@ -75,7 +75,6 @@ export default [
             caseInsensitive: true,
           },
           pathGroups: [
-
             {
               pattern: '@/features/**',
               group: 'internal',
@@ -133,9 +132,9 @@ export default [
   {
     ignores: [
       '*.{js,mjs,mts,config.js,config.ts}',
-      'dist/**',
-      'infra/**',
       'node_modules/**',
+      'infra/**',
+      '**/dist/**',
       '**/coverage/**',
       '**/build/**',
     ],

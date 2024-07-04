@@ -1,0 +1,25 @@
+services:
+  mongodb:
+    extends:
+      service: mongodb
+      file: infra/docker/docker-compose-mongodb.yaml
+
+  api:
+    extends:
+      service: api
+      file: api/docker-compose.yaml
+
+  client:
+    extends:
+      service: client
+      file: client/docker-compose.yaml
+
+volumes:
+  mongodb:
+    name: mongodb
+  node_modules:
+    name: node-modules
+
+networks:
+  mern:
+    name: mern

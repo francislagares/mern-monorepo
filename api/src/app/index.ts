@@ -7,7 +7,11 @@ import hpp from 'hpp';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
 
-import { MongoDBInstance as dbConnection } from 'api/src/config/database';
+import { ErrorMiddleware } from '@/libs/shared/middlewares/error.middleware';
+
+import logger from '@/utils/logger';
+
+import { MongoDBInstance as dbConnection } from '@/config/database';
 import {
   BASE_URL,
   CLIENT_URL,
@@ -16,10 +20,9 @@ import {
   NODE_ENV,
   ORIGIN,
   PORT,
-} from 'api/src/config/environment';
-import { ErrorMiddleware } from 'api/src/libs/shared/middlewares/error.middleware';
-import applicationRoutes from 'api/src/routes/index';
-import logger from 'api/src/utils/logger';
+} from '@/config/environment';
+
+import applicationRoutes from '@/routes/index';
 
 export class App {
   private app: Application;

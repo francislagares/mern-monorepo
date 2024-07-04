@@ -1,0 +1,26 @@
+services:
+  api:
+    container_name: node-api
+    image: node-api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    stdin_open: true
+    env_file: .env.development.local
+    depends_on:
+      - mongodb
+    networks:
+      - mern
+    ports:
+      - 4000:4000
+    environment:
+      - NODE_ENV=development
+      - BASE_URL=http://localhost:4000
+    volumes:
+      - .:/node-api
+      - node_modules:/node-api/node_modules
+
+volumes:
+  node_modules:
+    name: node-modules

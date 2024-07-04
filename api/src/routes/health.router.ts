@@ -1,6 +1,6 @@
 import express, { Router } from 'express';
 
-import HealthController from 'api/src/controllers/health.controller';
+import HealthController from '@/controllers/health.controller';
 
 export class HealthRoutes {
   private router: Router;

@@ -1,5 +1,6 @@
-import { database } from 'api/src/libs/shared/prisma/prisma';
-import logger from 'api/src/utils/logger';
+import { database } from '@/libs/shared/prisma/prisma';
+
+import logger from '@/utils/logger';
 
 export class MongoDBInstance {
   private static instance: MongoDBInstance;

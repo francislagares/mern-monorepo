@@ -1,0 +1,26 @@
+# Versioning and metadata
+.git
+.vscode
+.gitignore
+.dockerignore
+
+# Build dependencies
+dist
+/node_modules
+
+# code formatter
+.editorconfig
+.eslintignore
+.eslintrc.json
+.huskyrc
+.lintstagedrc.json
+.prettierrc
+README.md
+
+# test
+coverage
+vitest.config.js
+
+# docker
+Dockerfile
+docker-compose.yml

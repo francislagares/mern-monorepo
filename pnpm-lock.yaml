@@ -35,7 +35,7 @@ importers:
         version: 7.15.0(eslint@9.6.0)(typescript@5.5.3)
       '@vitest/coverage-v8':
         specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+        version: 1.6.0(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1))
       commitizen:
         specifier: ^4.3.0
         version: 4.3.0(@types/node@20.14.9)(typescript@5.5.3)
@@ -73,8 +73,8 @@ importers:
         specifier: ^5.0.1
         version: 5.0.7
       tsx:
-        specifier: ^4.16.0
-        version: 4.16.0
+        specifier: ^4.16.2
+        version: 4.16.2
       typescript:
         specifier: ^5.1.3
         version: 5.5.3
@@ -82,17 +82,17 @@ importers:
         specifier: ^7.15.0
         version: 7.15.0(eslint@9.6.0)(typescript@5.5.3)
       vite:
-        specifier: ^5.3.2
-        version: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+        specifier: ^5.3.3
+        version: 5.3.3(@types/node@20.14.9)(sugarss@4.0.1)
       vite-tsconfig-paths:
         specifier: ^4.2.0
-        version: 4.3.2(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 4.3.2(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@4.0.1))
       vitest:
         specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+        version: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1)
       vitest-mock-extended:
         specifier: ^1.1.3
-        version: 1.3.1(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+        version: 1.3.1(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1))
 
   api:
     dependencies:
@@ -215,8 +215,8 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0
       tsx:
-        specifier: ^4.16.0
-        version: 4.16.0
+        specifier: ^4.16.2
+        version: 4.16.2
       typescript-transform-paths:
         specifier: ^3.4.7
         version: 3.4.7(typescript@5.5.3)
@@ -230,12 +230,12 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
       react-router-dom:
-        specifier: ^6.11.2
-        version: 6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: ^6.24.1
+        version: 6.24.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@chromatic-com/storybook':
-        specifier: ^1.6.0
-        version: 1.6.0(react@18.3.1)
+        specifier: ^1.6.1
+        version: 1.6.1(react@18.3.1)
       '@mdx-js/react':
         specifier: ^3.0.1
         version: 3.0.1(@types/react@18.3.3)(react@18.3.1)
@@ -250,7 +250,7 @@ importers:
         version: 8.1.11(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-interactions':
         specifier: ^8.1.11
-        version: 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+        version: 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))
       '@storybook/addon-links':
         specifier: ^8.1.11
         version: 8.1.11(react@18.3.1)
@@ -262,16 +262,16 @@ importers:
         version: 8.1.11(@types/react-dom@18.3.0)(@types/react@18.3.3)(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/builder-vite':
         specifier: ^8.1.11
-        version: 8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       '@storybook/react':
         specifier: ^8.1.11
         version: 8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
       '@storybook/react-vite':
         specifier: ^8.1.11
-        version: 8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       '@storybook/test':
         specifier: ^8.1.11
-        version: 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+        version: 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))
       '@storybook/testing-library':
         specifier: ^0.2.2
         version: 0.2.2
@@ -283,7 +283,7 @@ importers:
         version: 10.3.0
       '@testing-library/jest-dom':
         specifier: ^6.4.6
-        version: 6.4.6(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+        version: 6.4.6(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))
       '@testing-library/react':
         specifier: ^16.0.0
         version: 16.0.0(@testing-library/dom@10.3.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -298,7 +298,7 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react':
         specifier: ^4.0.0
-        version: 4.3.1(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 4.3.1(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       '@vitest/ui':
         specifier: ^1.6.0
         version: 1.6.0(vitest@1.6.0)
@@ -307,7 +307,7 @@ importers:
         version: 13.13.0
       cypress-vite:
         specifier: ^1.4.0
-        version: 1.5.0(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 1.5.0(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       eslint-plugin-jest-dom:
         specifier: ^5.0.0
         version: 5.4.0(@testing-library/dom@10.3.0)(eslint@9.6.0)
@@ -357,14 +357,14 @@ importers:
         specifier: ^6.0.3
         version: 6.0.4(stylelint@16.6.1(typescript@5.5.3))
       vite:
-        specifier: ^5.3.2
-        version: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+        specifier: ^5.3.3
+        version: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
       vite-plugin-svgr:
         specifier: ^4.2.0
-        version: 4.2.0(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 4.2.0(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       vite-tsconfig-paths:
         specifier: ^4.2.0
-        version: 4.3.2(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+        version: 4.3.2(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
 
 packages:
 
@@ -1042,8 +1042,8 @@ packages:
   '@bundled-es-modules/statuses@1.0.1':
     resolution: {integrity: sha512-yn7BklA5acgcBr+7w064fGV+SGIFySjCKpqjcWgBAIfrAkY+4GQTJJHQMeT3V/sgz23VTEVV8TtOmkvJAhFVfg==}
 
-  '@chromatic-com/storybook@1.6.0':
-    resolution: {integrity: sha512-6sHj0l194KMBIZ0D5SeJ+Ys+zslehKHcC2d6Hd/YEn4cCl7p9mLuxrZjvf8xharGKy8vf9Q1tKrU2YdldzUBoQ==}
+  '@chromatic-com/storybook@1.6.1':
+    resolution: {integrity: sha512-x1x1NB3j4xpfeSWKr96emc+7ZvfsvH+/WVb3XCjkB24PPbT8VZXb3mJSAQMrSzuQ8+eQE9kDogYHH9Fj3tb/Cw==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
 
   '@colors/colors@1.5.0':
@@ -1814,8 +1814,8 @@ packages:
       '@types/react':
         optional: true
 
-  '@remix-run/router@1.17.0':
-    resolution: {integrity: sha512-2D6XaHEVvkCn682XBnipbJjgZUU7xjLtA4dGJRBVUKpEaDYOZMENZoZjAOSb7qirxt5RupjzZxz4fK2FO+EFPw==}
+  '@remix-run/router@1.17.1':
+    resolution: {integrity: sha512-mCOMec4BKd6BRGBZeSnGiIgwsbLGp3yhVqAD8H+PxiRNEHgDpZb8J1TnrSDlg97t0ySKMQJTHCWBCmBpSmkF6Q==}
     engines: {node: '>=14.0.0'}
 
   '@rollup/pluginutils@5.1.0':
@@ -3554,6 +3554,10 @@ packages:
     resolution: {integrity: sha512-AZL67abkUzIuvcHqk7c09cezpGNcxUxU4Ioi/05xHk4DQeTkWmGYftIE6ctU6AEt+Gn4n1lDStOtj7FKycP71A==}
     engines: {node: '>=8'}
 
+  cssstyle@4.0.1:
+    resolution: {integrity: sha512-8ZYiJ3A/3OkDd093CBT/0UKDWry7ak4BdPTFP2+QEP7cmhouyq/Up709ASSj2cK02BbZiMgk7kYjZNS4QP5qrQ==}
+    engines: {node: '>=18'}
+
   csstype@3.1.3:
     resolution: {integrity: sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==}
 
@@ -3596,6 +3600,10 @@ packages:
   data-urls@3.0.2:
     resolution: {integrity: sha512-Jy/tj3ldjZJo63sVAvg6LHt2mHvl4V6AgRAmNDtLdm7faqtsx+aJG42rsyCo9JCoRVKwPFzKlIPx3DIibwSIaQ==}
     engines: {node: '>=12'}
+
+  data-urls@5.0.0:
+    resolution: {integrity: sha512-ZYP5VBHshaDAiVZxjbRVcFJpc+4xGgT0bK3vzy1HLN8jTO975HEbuYzZJcHoQEY5K1a0z8YayJkyVETa08eNTg==}
+    engines: {node: '>=18'}
 
   data-view-buffer@1.0.1:
     resolution: {integrity: sha512-0lht7OugA5x3iJLOWFhWK/5ehONdprk0ISXqVFn/NFrDu+cuc8iADFrGQz5BnRK7LLU3JmkbXSxaqX+/mXYtUA==}
@@ -4764,6 +4772,10 @@ packages:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
     engines: {node: '>=12'}
 
+  html-encoding-sniffer@4.0.0:
+    resolution: {integrity: sha512-Y22oTqIU4uuPgEemfz7NDJz6OeKf12Lsu+QC+s3BVpda64lTiMYCyGwg5ki4vFxkMwQdeZDl2adZoqUgdFuTgQ==}
+    engines: {node: '>=18'}
+
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
 
@@ -5360,6 +5372,15 @@ packages:
     engines: {node: '>=14'}
     peerDependencies:
       canvas: ^2.5.0
+    peerDependenciesMeta:
+      canvas:
+        optional: true
+
+  jsdom@24.1.0:
+    resolution: {integrity: sha512-6gpM7pRXCwIOKxX47cgOyvyQDN/Eh0f1MeKySBV2xGdKtqJBLj8P25eY3EVCWo2mglDDzozR2r2MW4T+JiNUZA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      canvas: ^2.11.2
     peerDependenciesMeta:
       canvas:
         optional: true
@@ -6692,15 +6713,15 @@ packages:
       '@types/react':
         optional: true
 
-  react-router-dom@6.24.0:
-    resolution: {integrity: sha512-960sKuau6/yEwS8e+NVEidYQb1hNjAYM327gjEyXlc6r3Skf2vtwuJ2l7lssdegD2YjoKG5l8MsVyeTDlVeY8g==}
+  react-router-dom@6.24.1:
+    resolution: {integrity: sha512-U19KtXqooqw967Vw0Qcn5cOvrX5Ejo9ORmOtJMzYWtCT4/WOfFLIZGGsVLxcd9UkBO0mSTZtXqhZBsWlHr7+Sg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
       react-dom: '>=16.8'
 
-  react-router@6.24.0:
-    resolution: {integrity: sha512-sQrgJ5bXk7vbcC4BxQxeNa5UmboFm35we1AFK0VvQaz9g0LzxEIuLOhHIoZ8rnu9BO21ishGeL9no1WB76W/eg==}
+  react-router@6.24.1:
+    resolution: {integrity: sha512-PTXFXGK2pyXpHzVo3rR9H7ip4lSPZZc0bHG5CARmj65fTT6qG7sTngmb6lcYu1gf3y/8KxORoy9yn59pGpCnpg==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
       react: '>=16.8'
@@ -6939,6 +6960,12 @@ packages:
     resolution: {integrity: sha512-QmJz14PX3rzbJCN1SG4Xe/bAAX2a6NpCP8ab2vfu2GiUr8AQcr2nCV/oEO3yneFarB67zk8ShlIyWb2LGTb3Sg==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
+
+  rrweb-cssom@0.6.0:
+    resolution: {integrity: sha512-APM0Gt1KoXBz0iIkkdB/kfvGOwC4UuJFeG/c+yV7wSc7q96cG/kJ0HiYCnzivD9SB53cLV1MlHFNfOuPaadYSw==}
+
+  rrweb-cssom@0.7.1:
+    resolution: {integrity: sha512-TrEMa7JGdVm0UThDJSx7ddw5nVm3UJS9o9CCIZ72B1vSyEZoziDqBYP3XIoi/12lKrJR8rE3jeFHMok2F/Mnsg==}
 
   run-async@2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
@@ -7374,6 +7401,12 @@ packages:
   sugarss@1.0.1:
     resolution: {integrity: sha512-3qgLZytikQQEVn1/FrhY7B68gPUUGY3R1Q1vTiD5xT+Ti1DP/8iZuwFet9ONs5+bmL8pZoDQ6JrQHVgrNlK6mA==}
 
+  sugarss@4.0.1:
+    resolution: {integrity: sha512-WCjS5NfuVJjkQzK10s8WOBY+hhDxxNt/N6ZaGwxFZ+wN3/lKKFSaaKUNecULcTTvE4urLcKaZFQD8vO0mOZujw==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.3.3
+
   superagent@9.0.2:
     resolution: {integrity: sha512-xuW7dzkUpcJq7QnhOsnNUgtYp3xRwpt2F7abdRYIpCsAt0hhUqia0EdxyXZQQpNmGtsCzYHryaKSV3q3GJnq7w==}
     engines: {node: '>=14.18.0'}
@@ -7588,6 +7621,10 @@ packages:
     resolution: {integrity: sha512-l7FvfAHlcmulp8kr+flpQZmVwtu7nfRV7NZujtN0OqES8EL4O4e0qqzL0DC5gAvx/ZC/9lk6rhcUwYvkBnBnYA==}
     engines: {node: '>=12'}
 
+  tr46@5.0.0:
+    resolution: {integrity: sha512-tk2G5R2KRwBd+ZN0zaEXpmzdKyOYksXwywulIX95MBODjSzMIuQnQ3m8JxgbhnL1LeVo7lqQKsYa1O3Htl7K5g==}
+    engines: {node: '>=18'}
+
   tree-kill@1.2.2:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
@@ -7686,8 +7723,8 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
-  tsx@4.16.0:
-    resolution: {integrity: sha512-MPgN+CuY+4iKxGoJNPv+1pyo5YWZAQ5XfsyobUG+zoKG7IkvCPLZDEyoIb8yLS2FcWci1nlxAqmvPlFWD5AFiQ==}
+  tsx@4.16.2:
+    resolution: {integrity: sha512-C1uWweJDgdtX2x600HjaFaucXTilT7tgUZHbOE4+ypskZ1OP8CRCSDkCxG6Vya9EwaFIVagWwpaVAn5wzypaqQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -7992,8 +8029,8 @@ packages:
       vite:
         optional: true
 
-  vite@5.3.2:
-    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
+  vite@5.3.3:
+    resolution: {integrity: sha512-NPQdeCU0Dv2z5fu+ULotpuq5yfCS1BzKUIPhNbP3YBfAMGJXbt2nS+sbTFu+qchaqWTD+H3JK++nRwr6XIcp6A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -8059,6 +8096,10 @@ packages:
     resolution: {integrity: sha512-d+BFHzbiCx6zGfz0HyQ6Rg69w9k19nviJspaj4yNscGjrHu94sVP+aRm75yEbCh+r2/yR+7q6hux9LVtbuTGBw==}
     engines: {node: '>=14'}
 
+  w3c-xmlserializer@5.0.0:
+    resolution: {integrity: sha512-o8qghlI8NZHU1lLPrpi2+Uq7abh4GGPpYANlalzWxyWteJOCsr/P+oPBA49TOLu5FTZO4d3F9MnWJfiMo4BkmA==}
+    engines: {node: '>=18'}
+
   watchpack@2.4.1:
     resolution: {integrity: sha512-8wrBCMtVhqcXP2Sup1ctSkga6uc2Bx0IIvKyT7yTFier5AXHooSI+QyQQAtTb7+E0IUCCKyTFmXqdqgum2XWGg==}
     engines: {node: '>=10.13.0'}
@@ -8084,13 +8125,25 @@ packages:
     resolution: {integrity: sha512-p41ogyeMUrw3jWclHWTQg1k05DSVXPLcVxRTYsXUk+ZooOCZLcoYgPZ/HL/D/N+uQPOtcp1me1WhBEaX02mhWg==}
     engines: {node: '>=12'}
 
+  whatwg-encoding@3.1.1:
+    resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
+    engines: {node: '>=18'}
+
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
     engines: {node: '>=12'}
 
+  whatwg-mimetype@4.0.0:
+    resolution: {integrity: sha512-QaKxh0eNIi2mE9p2vEdzfagOKHCcj1pJ56EEHGQOVxp8r9/iszLUUV7v89x9O1p/T+NlTM5W7jW6+cz4Fq1YVg==}
+    engines: {node: '>=18'}
+
   whatwg-url@11.0.0:
     resolution: {integrity: sha512-RKT8HExMpoYx4igMiVMY83lN6UeITKJlBQ+vR/8ZJ8OCdSiN3RwCq+9gH0+Xzj0+5IrM6i4j/6LuvzbZIQgEcQ==}
     engines: {node: '>=12'}
+
+  whatwg-url@14.0.0:
+    resolution: {integrity: sha512-1lfMEm2IEr7RIV+f4lUNPOqfFL+pO+Xw3fJSqmjX9AbXcXcYOkCe1P6+9VBZB6n94af16NfZf+sSk0JCBZC9aw==}
+    engines: {node: '>=18'}
 
   whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
@@ -8200,6 +8253,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.18.0:
+    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   x-is-string@0.1.0:
     resolution: {integrity: sha512-GojqklwG8gpzOVEVki5KudKNoq7MbbjYZCbyWzEz7tyPA7eleiE0+ePwOWQQRb5fm86rD3S8Tc0tSFf3AOv50w==}
 
@@ -8210,6 +8275,10 @@ packages:
   xml-name-validator@4.0.0:
     resolution: {integrity: sha512-ICP2e+jsHvAj2E2lIHxa5tjXRlKDJo4IdvPvCXbXQGdzSfmSpNVyIKMvoZHjDY9DP0zV17iI85o90vRFXNccRw==}
     engines: {node: '>=12'}
+
+  xml-name-validator@5.0.0:
+    resolution: {integrity: sha512-EvGK8EJ3DhaHfbRlETOWAS5pO9MZITeauHKJyb8wyajUfQUenkIg2MvLDTZ4T/TgIcm3HU0TFBgWWboAZ30UHg==}
+    engines: {node: '>=18'}
 
   xmlchars@2.2.0:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
@@ -9154,7 +9223,7 @@ snapshots:
     dependencies:
       statuses: 2.0.1
 
-  '@chromatic-com/storybook@1.6.0(react@18.3.1)':
+  '@chromatic-com/storybook@1.6.1(react@18.3.1)':
     dependencies:
       chromatic: 11.5.4
       filesize: 10.1.2
@@ -9589,13 +9658,13 @@ snapshots:
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))':
     dependencies:
       glob: 7.2.3
       glob-promise: 4.2.2(glob@7.2.3)
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.5.3)
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     optionalDependencies:
       typescript: 5.5.3
 
@@ -9900,7 +9969,7 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
-  '@remix-run/router@1.17.0': {}
+  '@remix-run/router@1.17.1': {}
 
   '@rollup/pluginutils@5.1.0(rollup@4.18.0)':
     dependencies:
@@ -10057,11 +10126,11 @@ snapshots:
     dependencies:
       '@storybook/global': 5.0.0
 
-  '@storybook/addon-interactions@8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))':
+  '@storybook/addon-interactions@8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))':
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.1.11
-      '@storybook/test': 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+      '@storybook/test': 8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))
       '@storybook/types': 8.1.11
       polished: 4.3.1
       ts-dedent: 2.2.0
@@ -10159,7 +10228,7 @@ snapshots:
       - prettier
       - supports-color
 
-  '@storybook/builder-vite@8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))':
+  '@storybook/builder-vite@8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))':
     dependencies:
       '@storybook/channels': 8.1.11
       '@storybook/client-logger': 8.1.11
@@ -10178,7 +10247,7 @@ snapshots:
       fs-extra: 11.2.0
       magic-string: 0.30.10
       ts-dedent: 2.2.0
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     optionalDependencies:
       typescript: 5.5.3
     transitivePeerDependencies:
@@ -10493,11 +10562,11 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/react-vite@8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))':
+  '@storybook/react-vite@8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
-      '@storybook/builder-vite': 8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))
+      '@storybook/builder-vite': 8.1.11(prettier@3.3.2)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))
       '@storybook/node-logger': 8.1.11
       '@storybook/react': 8.1.11(prettier@3.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.3)
       '@storybook/types': 8.1.11
@@ -10508,7 +10577,7 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       resolve: 1.22.8
       tsconfig-paths: 4.2.0
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - encoding
@@ -10571,14 +10640,14 @@ snapshots:
       - prettier
       - supports-color
 
-  '@storybook/test@8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))':
+  '@storybook/test@8.1.11(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))':
     dependencies:
       '@storybook/client-logger': 8.1.11
       '@storybook/core-events': 8.1.11
       '@storybook/instrumenter': 8.1.11
       '@storybook/preview-api': 8.1.11
       '@testing-library/dom': 10.1.0
-      '@testing-library/jest-dom': 6.4.5(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))
+      '@testing-library/jest-dom': 6.4.5(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))
       '@testing-library/user-event': 14.5.2(@testing-library/dom@10.1.0)
       '@vitest/expect': 1.6.0
       '@vitest/spy': 1.6.0
@@ -10721,7 +10790,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))':
+  '@testing-library/jest-dom@6.4.5(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.7
@@ -10732,9 +10801,9 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
     optionalDependencies:
-      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1)
 
-  '@testing-library/jest-dom@6.4.6(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))':
+  '@testing-library/jest-dom@6.4.6(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1))':
     dependencies:
       '@adobe/css-tools': 4.4.0
       '@babel/runtime': 7.24.7
@@ -10745,7 +10814,7 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
     optionalDependencies:
-      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1)
 
   '@testing-library/react@16.0.0(@testing-library/dom@10.3.0)(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -11160,18 +11229,18 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.3.1(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1))':
+  '@vitejs/plugin-react@4.3.1(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1))':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.24.7)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1))':
+  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -11186,7 +11255,7 @@ snapshots:
       std-env: 3.7.0
       strip-literal: 2.1.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -11221,7 +11290,7 @@ snapshots:
       pathe: 1.1.2
       picocolors: 1.0.1
       sirv: 2.0.4
-      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1)
 
   '@vitest/utils@1.6.0':
     dependencies:
@@ -12146,6 +12215,11 @@ snapshots:
     dependencies:
       cssom: 0.3.8
 
+  cssstyle@4.0.1:
+    dependencies:
+      rrweb-cssom: 0.6.0
+    optional: true
+
   csstype@3.1.3: {}
 
   culvert@0.1.2: {}
@@ -12154,11 +12228,11 @@ snapshots:
     dependencies:
       array-find-index: 1.0.2
 
-  cypress-vite@1.5.0(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1)):
+  cypress-vite@1.5.0(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1)):
     dependencies:
       chokidar: 3.6.0
       debug: 4.3.5(supports-color@8.1.1)
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -12236,6 +12310,12 @@ snapshots:
       abab: 2.0.6
       whatwg-mimetype: 3.0.0
       whatwg-url: 11.0.0
+
+  data-urls@5.0.0:
+    dependencies:
+      whatwg-mimetype: 4.0.0
+      whatwg-url: 14.0.0
+    optional: true
 
   data-view-buffer@1.0.1:
     dependencies:
@@ -13677,6 +13757,11 @@ snapshots:
     dependencies:
       whatwg-encoding: 2.0.0
 
+  html-encoding-sniffer@4.0.0:
+    dependencies:
+      whatwg-encoding: 3.1.1
+    optional: true
+
   html-escaper@2.0.2: {}
 
   html-tags@2.0.0: {}
@@ -14285,6 +14370,35 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  jsdom@24.1.0:
+    dependencies:
+      cssstyle: 4.0.1
+      data-urls: 5.0.0
+      decimal.js: 10.4.3
+      form-data: 4.0.0
+      html-encoding-sniffer: 4.0.0
+      http-proxy-agent: 7.0.2
+      https-proxy-agent: 7.0.5
+      is-potential-custom-element-name: 1.0.1
+      nwsapi: 2.2.10
+      parse5: 7.1.2
+      rrweb-cssom: 0.7.1
+      saxes: 6.0.0
+      symbol-tree: 3.2.4
+      tough-cookie: 4.1.4
+      w3c-xmlserializer: 5.0.0
+      webidl-conversions: 7.0.0
+      whatwg-encoding: 3.1.1
+      whatwg-mimetype: 4.0.0
+      whatwg-url: 14.0.0
+      ws: 8.18.0
+      xml-name-validator: 5.0.0
+    transitivePeerDependencies:
+      - bufferutil
+      - supports-color
+      - utf-8-validate
+    optional: true
 
   jsesc@0.5.0: {}
 
@@ -15689,16 +15803,16 @@ snapshots:
     optionalDependencies:
       '@types/react': 18.3.3
 
-  react-router-dom@6.24.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@6.24.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      '@remix-run/router': 1.17.0
+      '@remix-run/router': 1.17.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-router: 6.24.0(react@18.3.1)
+      react-router: 6.24.1(react@18.3.1)
 
-  react-router@6.24.0(react@18.3.1):
+  react-router@6.24.1(react@18.3.1):
     dependencies:
-      '@remix-run/router': 1.17.0
+      '@remix-run/router': 1.17.1
       react: 18.3.1
 
   react-style-singleton@2.2.1(@types/react@18.3.3)(react@18.3.1):
@@ -16017,6 +16131,12 @@ snapshots:
       '@rollup/rollup-win32-ia32-msvc': 4.18.0
       '@rollup/rollup-win32-x64-msvc': 4.18.0
       fsevents: 2.3.3
+
+  rrweb-cssom@0.6.0:
+    optional: true
+
+  rrweb-cssom@0.7.1:
+    optional: true
 
   run-async@2.4.1: {}
 
@@ -16542,6 +16662,9 @@ snapshots:
     dependencies:
       postcss: 6.0.23
 
+  sugarss@4.0.1:
+    optional: true
+
   superagent@9.0.2:
     dependencies:
       component-emitter: 1.3.1
@@ -16772,6 +16895,11 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  tr46@5.0.0:
+    dependencies:
+      punycode: 2.3.1
+    optional: true
+
   tree-kill@1.2.2: {}
 
   trim-newlines@1.0.0: {}
@@ -16853,7 +16981,7 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.5.3
 
-  tsx@4.16.0:
+  tsx@4.16.2:
     dependencies:
       esbuild: 0.21.5
       get-tsconfig: 4.7.5
@@ -17155,7 +17283,7 @@ snapshots:
       debug: 4.3.5(supports-color@8.1.1)
       pathe: 1.1.2
       picocolors: 1.0.1
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -17166,29 +17294,57 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-svgr@4.2.0(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1)):
+  vite-node@1.6.0(@types/node@20.14.9)(sugarss@4.0.1):
+    dependencies:
+      cac: 6.7.14
+      debug: 4.3.5(supports-color@8.1.1)
+      pathe: 1.1.2
+      picocolors: 1.0.1
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@4.0.1)
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  vite-plugin-svgr@4.2.0(rollup@4.18.0)(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1)):
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.18.0)
       '@svgr/core': 8.1.0(typescript@5.5.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.5.3))
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - rollup
       - supports-color
       - typescript
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.3)(vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1)):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1)):
     dependencies:
       debug: 4.3.5(supports-color@8.1.1)
       globrex: 0.1.2
       tsconfck: 3.1.1(typescript@5.5.3)
     optionalDependencies:
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.3.2(@types/node@20.14.9)(sugarss@1.0.1):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.3)(vite@5.3.3(@types/node@20.14.9)(sugarss@4.0.1)):
+    dependencies:
+      debug: 4.3.5(supports-color@8.1.1)
+      globrex: 0.1.2
+      tsconfck: 3.1.1(typescript@5.5.3)
+    optionalDependencies:
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@4.0.1)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
+
+  vite@5.3.3(@types/node@20.14.9)(sugarss@1.0.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.39
@@ -17198,13 +17354,23 @@ snapshots:
       fsevents: 2.3.3
       sugarss: 1.0.1
 
-  vitest-mock-extended@1.3.1(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)):
+  vite@5.3.3(@types/node@20.14.9)(sugarss@4.0.1):
+    dependencies:
+      esbuild: 0.21.5
+      postcss: 8.4.39
+      rollup: 4.18.0
+    optionalDependencies:
+      '@types/node': 20.14.9
+      fsevents: 2.3.3
+      sugarss: 4.0.1
+
+  vitest-mock-extended@1.3.1(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1)):
     dependencies:
       ts-essentials: 9.4.2(typescript@5.5.3)
       typescript: 5.5.3
-      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1)
+      vitest: 1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1)
 
-  vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@20.0.3)(sugarss@1.0.1):
+  vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@1.0.1):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -17223,13 +17389,48 @@ snapshots:
       strip-literal: 2.1.0
       tinybench: 2.8.0
       tinypool: 0.8.4
-      vite: 5.3.2(@types/node@20.14.9)(sugarss@1.0.1)
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@1.0.1)
       vite-node: 1.6.0(@types/node@20.14.9)(sugarss@1.0.1)
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 20.14.9
       '@vitest/ui': 1.6.0(vitest@1.6.0)
-      jsdom: 20.0.3
+      jsdom: 24.1.0
+    transitivePeerDependencies:
+      - less
+      - lightningcss
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
+  vitest@1.6.0(@types/node@20.14.9)(@vitest/ui@1.6.0)(jsdom@24.1.0)(sugarss@4.0.1):
+    dependencies:
+      '@vitest/expect': 1.6.0
+      '@vitest/runner': 1.6.0
+      '@vitest/snapshot': 1.6.0
+      '@vitest/spy': 1.6.0
+      '@vitest/utils': 1.6.0
+      acorn-walk: 8.3.3
+      chai: 4.4.1
+      debug: 4.3.5(supports-color@8.1.1)
+      execa: 8.0.1
+      local-pkg: 0.5.0
+      magic-string: 0.30.10
+      pathe: 1.1.2
+      picocolors: 1.0.1
+      std-env: 3.7.0
+      strip-literal: 2.1.0
+      tinybench: 2.8.0
+      tinypool: 0.8.4
+      vite: 5.3.3(@types/node@20.14.9)(sugarss@4.0.1)
+      vite-node: 1.6.0(@types/node@20.14.9)(sugarss@4.0.1)
+      why-is-node-running: 2.2.2
+    optionalDependencies:
+      '@types/node': 20.14.9
+      '@vitest/ui': 1.6.0(vitest@1.6.0)
+      jsdom: 24.1.0
     transitivePeerDependencies:
       - less
       - lightningcss
@@ -17249,6 +17450,11 @@ snapshots:
   w3c-xmlserializer@4.0.0:
     dependencies:
       xml-name-validator: 4.0.0
+
+  w3c-xmlserializer@5.0.0:
+    dependencies:
+      xml-name-validator: 5.0.0
+    optional: true
 
   watchpack@2.4.1:
     dependencies:
@@ -17271,12 +17477,26 @@ snapshots:
     dependencies:
       iconv-lite: 0.6.3
 
+  whatwg-encoding@3.1.1:
+    dependencies:
+      iconv-lite: 0.6.3
+    optional: true
+
   whatwg-mimetype@3.0.0: {}
+
+  whatwg-mimetype@4.0.0:
+    optional: true
 
   whatwg-url@11.0.0:
     dependencies:
       tr46: 3.0.0
       webidl-conversions: 7.0.0
+
+  whatwg-url@14.0.0:
+    dependencies:
+      tr46: 5.0.0
+      webidl-conversions: 7.0.0
+    optional: true
 
   whatwg-url@5.0.0:
     dependencies:
@@ -17411,11 +17631,17 @@ snapshots:
 
   ws@8.17.1: {}
 
+  ws@8.18.0:
+    optional: true
+
   x-is-string@0.1.0: {}
 
   xdg-basedir@3.0.0: {}
 
   xml-name-validator@4.0.0: {}
+
+  xml-name-validator@5.0.0:
+    optional: true
 
   xmlchars@2.2.0: {}
 

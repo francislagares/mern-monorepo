@@ -2,8 +2,9 @@ import express, { Application } from 'express';
 import request from 'supertest';
 import { beforeAll, describe, expect, it } from 'vitest';
 
-import { App } from 'api/src/app';
-import HealthController from 'api/src/controllers/health.controller';
+import HealthController from '@/controllers/health.controller';
+
+import { App } from '@/app';
 
 describe('HealthController', () => {
   let app: Application;

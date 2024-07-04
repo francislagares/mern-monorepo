@@ -1,9 +1,44 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
+    /* Project Setup */
+    "target": "ES2022",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
-    "module": "esnext"
-  },
+    "allowJs": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "removeComments": true,
+    "downlevelIteration": true,
 
-  "include": ["./src/**/*.ts", "./src/**/*.tsx", "@testing-library/jest-dom"]
+    /* Strict Type-Checking */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Linter Checks */
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "useDefineForClassFields": true,
+
+    /* Module Resolution */
+    "module": "ESNext",
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["./src/**/*.ts", "./src/**/*.tsx", "@testing-library/jest-dom"],
+  "exclude": ["./cypress.config.ts"],
+  "types": ["vitest/globals"]
 }

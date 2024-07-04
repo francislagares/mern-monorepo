@@ -6,7 +6,7 @@
   "author": "Francis Lagares",
   "license": "MIT",
   "scripts": {
-    "start:dev": "pnpm prisma:generate && pnpm prisma:seed cross-env NODE_ENV=development && tsx watch src/server.ts",
+    "start:dev": "pnpm prisma:generate && tsx watch src/server.ts",
     "start": "pnpm build && NODE_ENV=production && node dist/server.js",
     "build": "tsc && tsc-alias",
     "deploy:clean": "pm2 stop all && pm2 delete all",
@@ -65,12 +65,17 @@
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.6",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.16.0",
+    "tsx": "^4.16.2",
     "typescript-transform-paths": "^3.4.7"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  }
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.4.0"
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }

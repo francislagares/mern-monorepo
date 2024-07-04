@@ -1,8 +1,41 @@
 {
-  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
+    /* Project Setup */
+    "target": "esnext",
+    "module": "NodeNext",
+    "outDir": "./dist",
+    "allowJs": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "isolatedModules": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "lib": ["dom", "esnext", "es2022"],
+
+    /* Strict Type-Checking */
+    "strict": true,
+
+    /* Module Resolution */
+    "esModuleInterop": true,
+    "moduleResolution": "NodeNext",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
+    /* Linter Checks */
+    "noFallthroughCasesInSwitch": true,
+
+    /* Experimental Options */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true
   },
+
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "coverage"]
 }

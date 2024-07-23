@@ -1,108 +1,55 @@
-import compression from 'compression';
-import cookieParser from 'cookie-parser';
-import cors from 'cors';
-import { Application, json, urlencoded } from 'express';
-import helmet from 'helmet';
-import hpp from 'hpp';
-import swaggerJSDoc from 'swagger-jsdoc';
-import swaggerUi from 'swagger-ui-express';
-
-import { ErrorMiddleware } from '@/libs/shared/middlewares/error.middleware';
+import express from 'express';
 
 import logger from '@/utils/logger';
 
-import { MongoDBInstance as dbConnection } from '@/config/database';
-import {
-  BASE_URL,
-  CLIENT_URL,
-  CREDENTIALS,
-  HOST,
-  NODE_ENV,
-  ORIGIN,
-  PORT,
-} from '@/config/environment';
-
-import applicationRoutes from '@/routes/index';
+import { Server } from '@/server';
 
 export class App {
-  private app: Application;
+  public init() {
+    const httpServer = new Server(express());
 
-  constructor(app: Application) {
-    this.app = app;
+    httpServer.start();
   }
 
-  public start(): void {
-    this.connectDatabase();
-    this.securityMiddleware(this.app);
-    this.routesMiddleware(this.app);
-    this.globalErrorHandler(this.app);
-    this.startServer(this.app);
-    this.initializeSwagger();
-  }
+  private static handleExit(): void {
+    process.on('uncaughtException', (error: Error) => {
+      logger.error(`There was an uncaught error: ${error}`);
+      App.shutDownProperly(1);
+    });
 
-  public getServer() {
-    return this.app;
-  }
+    process.on('unhandledRejection', (reason: Error) => {
+      logger.error(`Unhandled rejection at promise: ${reason}`);
+      App.shutDownProperly(2);
+    });
 
-  private securityMiddleware(app: Application): void {
-    app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
-    app.use(hpp());
-    app.use(helmet());
-    app.use(compression());
-    app.use(json());
-    app.use(urlencoded({ extended: true, limit: '50mb' }));
-    app.use(cookieParser());
-    app.use(
-      cors({
-        origin: CLIENT_URL,
-        credentials: true,
-        optionsSuccessStatus: 200,
-        methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-      }),
-    );
-  }
+    process.on('SIGTERM', () => {
+      logger.error('Caught SIGTERM');
+      App.shutDownProperly(2);
+    });
 
-  private routesMiddleware(app: Application): void {
-    applicationRoutes(app);
-  }
+    process.on('SIGINT', () => {
+      logger.error('Caught SIGINT');
+      App.shutDownProperly(2);
+    });
 
-  private globalErrorHandler(app: Application): void {
-    app.use(ErrorMiddleware);
-  }
-
-  private connectDatabase(): void {
-    dbConnection.getInstance();
-  }
-
-  private startServer(app: Application): void {
-    logger.info(`------ NODE_ENV: ${NODE_ENV} ------`);
-    logger.info(`Server has started with process ${process.pid}`);
-    app.listen(PORT, () => {
-      logger.info(`Server listening on port ${PORT}`);
+    process.on('exit', () => {
+      logger.error('Exiting');
     });
   }
 
-  private initializeSwagger() {
-    const options = {
-      swaggerDefinition: {
-        openapi: '3.0.3',
-        info: {
-          title: 'API Documentation',
-          version: '1.0.0',
-          description: 'REST API docs',
-        },
-        servers: [
-          {
-            url: `${HOST}:${PORT}${BASE_URL}`,
-          },
-        ],
-      },
-      apis: ['./swagger.yaml'],
-    };
-
-    const swaggerSpecs = swaggerJSDoc(options);
-    this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
-
-    logger.info(`Docs are available at ${HOST}:${PORT}/api-docs`);
+  private static shutDownProperly(exitCode: number): void {
+    Promise.resolve()
+      .then(() => {
+        logger.info('Shutdown complete');
+        process.exit(exitCode);
+      })
+      .catch(error => {
+        logger.error(`Error during shutdown: ${error}`);
+        process.exit(1);
+      });
   }
 }
+
+const app = new App();
+
+app.init();

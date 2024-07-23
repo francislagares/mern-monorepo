@@ -4,6 +4,11 @@ services:
       service: mongodb
       file: infra/docker/docker-compose-mongodb.yaml
 
+  redis:
+    extends:
+      service: redis
+      file: infra/docker/docker-compose-redis.yaml
+
   api:
     extends:
       service: api
@@ -17,6 +22,8 @@ services:
 volumes:
   mongodb:
     name: mongodb
+  redis:
+    name: redis
   node_modules:
     name: node-modules
 

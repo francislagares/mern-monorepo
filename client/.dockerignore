@@ -5,7 +5,8 @@
 
 # Build dependencies
 .vscode
-dist.do
+dist
+logs
 /node_modules
 
 # code formatter
@@ -18,11 +19,9 @@ dist.do
 README.md
 
 # test
-.storybook
-cypress
 coverage
 vitest.config.js
 
 # docker
 Dockerfile
-docker-compose.yml
+docker-compose.yaml

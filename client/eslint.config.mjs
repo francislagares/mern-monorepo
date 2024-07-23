@@ -1,4 +1,5 @@
 import eslintRecomended from '@eslint/js';
+import pluginReactQuery from '@tanstack/eslint-plugin-query';
 import typeScriptEslintPlugin from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -12,6 +13,7 @@ import typescriptEslint from 'typescript-eslint';
 
 export default [
   ...typescriptEslint.configs.recommended,
+  ...pluginReactQuery.configs['flat/recommended'],
   eslintRecomended.configs.recommended,
   eslintConfigPrettier,
 

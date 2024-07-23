@@ -1,25 +1,23 @@
-# Stage 1: Development environment
+# Use the node alpine image as the base image
 FROM node:alpine
 
+# Install necessary packages and enable corepack
 RUN apk update && apk add --no-cache nodejs && corepack enable
-RUN addgroup mern && adduser -S -G mern francis
 
-USER francis
-
+# Set the working directory to /app
 WORKDIR /app
 
+# Copy only the package.json file initially for installing dependencies
 COPY package.json .
 
-USER root
-
-RUN chown -R francis:mern .
-
-USER francis
-
+# Install dependencies using pnpm
 RUN pnpm install
 
+# Copy all files from the host to the container's working directory
 COPY . .
 
+# Expose port 5173
 EXPOSE 5173
 
+# Command to run the application
 CMD ["pnpm", "dev"]

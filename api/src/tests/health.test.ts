@@ -4,13 +4,13 @@ import { beforeAll, describe, expect, it } from 'vitest';
 
 import HealthController from '@/controllers/health.controller';
 
-import { App } from '@/app';
+import { Server } from '@/server';
 
 describe('HealthController', () => {
   let app: Application;
 
   beforeAll(() => {
-    app = new App(express()).getServer();
+    app = new Server(express()).getServer();
 
     const controller = new HealthController();
     app.get('/health', controller.getHealth);

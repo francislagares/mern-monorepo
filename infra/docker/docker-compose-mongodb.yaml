@@ -14,7 +14,3 @@ volumes:
   mongodb:
     name: mongodb
     driver: local
-
-networks:
-  mern:
-    name: mern

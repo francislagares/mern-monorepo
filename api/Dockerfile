@@ -5,7 +5,7 @@ RUN addgroup backend && adduser -S -G backend francis
 
 USER francis
 
-WORKDIR /node-api
+WORKDIR /api
 
 COPY package.json tsconfig.json ./
 

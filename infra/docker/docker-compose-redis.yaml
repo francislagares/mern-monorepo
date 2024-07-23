@@ -1,26 +1,33 @@
-version: "3.9"
 services:
   redis:
     container_name: redis-cache
-    image: redis
+    image: redis:alpine
     ports:
       - 6379:6379
+    healthcheck:
+      test: ['CMD-SHELL', 'redis-cli ping | grep PONG']
+      interval: 1s
+      timeout: 3s
+      retries: 5
+    command: ['redis-server']
+    restart: unless-stopped
     volumes:
-      - ./redis_data:/data
+      - redis:/data
+    networks:
+      - mern
+
   redis-commander:
     container_name: redis-commander
     hostname: redis-commander
     image: ghcr.io/joeferner/redis-commander:latest
     environment:
-      - REDIS_HOSTS=local:redis:6379
+      - REDIS_HOSTS=local:redis-cache:6379
     ports:
       - '8081:8081'
-
-networks:
-  redis:
-    name: redis
+    networks:
+      - mern
 
 volumes:
-  redis_data:
-    name: redis_data
+  redis:
+    name: redis
     driver: local

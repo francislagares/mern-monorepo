@@ -32,33 +32,33 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@eslint/js": "^9.7.0",
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@eslint/js": "^9.9.1",
     "@mern-monorepo/client": "workspace:^",
-    "@types/node": "^20.14.11",
-    "@typescript-eslint/eslint-plugin": "^7.17.0",
-    "@typescript-eslint/parser": "^7.17.0",
-    "@vitest/coverage-v8": "^2.0.4",
+    "@types/node": "^22.5.1",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "@vitest/coverage-v8": "^2.0.5",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.7.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.7.0",
-    "husky": "^9.1.1",
-    "lint-staged": "^15.2.7",
+    "globals": "^15.9.0",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.9",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "tsx": "^4.16.2",
+    "tsx": "^4.19.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^7.17.0",
-    "vite": "^5.3.4",
-    "vite-tsconfig-paths": "^4.2.0",
-    "vitest": "^2.0.4",
-    "vitest-mock-extended": "^1.3.2"
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2",
+    "vite-tsconfig-paths": "^5.0.1",
+    "vitest": "^2.0.5",
+    "vitest-mock-extended": "^2.0.2"
   },
   "config": {
     "commitizen": {
@@ -70,7 +70,7 @@
   },
   "engines": {
     "node": ">=22.5.0",
-    "pnpm": ">=9.6.0"
+    "pnpm": ">=9.9.0"
   },
-  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e"
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1"
 }

@@ -12,6 +12,8 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    depends_on:
+      - api
 
 networks:
   mern:

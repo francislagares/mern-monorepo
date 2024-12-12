@@ -3,7 +3,7 @@
     /* Project Setup */
     "target": "ES2022",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowJs": true,
     "sourceMap": true,
     "skipLibCheck": true,
@@ -13,7 +13,6 @@
 
     /* Strict Type-Checking */
     "strict": true,
-    "noUncheckedIndexedAccess": true,
 
     /* Linter Checks */
     "noImplicitAny": true,
@@ -22,23 +21,40 @@
     "noUnusedParameters": true,
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
-
     "useDefineForClassFields": true,
 
     /* Module Resolution */
-    "module": "ESNext",
+    "module": "esnext",
     "outDir": "./dist",
     "esModuleInterop": true,
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
+    "types": ["vitest/globals"],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
-    }
+      "@/*": ["./src/*"],
+      "vite": ["node_modules/vite"]
+    },
+    "noEmit": true,
+    "incremental": true
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx", "@testing-library/jest-dom"],
-  "exclude": ["./cypress.config.ts"],
-  "types": ["vitest/globals"]
+  "include": [
+    "src",
+    "cypress",
+    "**/stories",
+    ".storybook",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "vitest.config.mts"
+  ],
+  "exclude": ["node_modules", "cypress.config.ts"]
 }

@@ -12,15 +12,7 @@ import { ErrorMiddleware } from '@/libs/shared/middlewares/error.middleware';
 import logger from '@/utils/logger';
 
 import { MongoDBInstance as dbConnection } from '@/config/database';
-import {
-  BASE_URL,
-  CLIENT_URL,
-  CREDENTIALS,
-  HOST,
-  NODE_ENV,
-  ORIGIN,
-  PORT,
-} from '@/config/environment';
+import { serverSchema } from '@/config/environment';
 
 import applicationRoutes from '@/routes/index';
 
@@ -45,7 +37,12 @@ export class Server {
   }
 
   private securityMiddleware(app: Application): void {
-    app.use(cors({ origin: ORIGIN, credentials: CREDENTIALS }));
+    app.use(
+      cors({
+        origin: serverSchema.CORS_ORIGIN,
+        credentials: serverSchema.CORS_CREDENTIALS,
+      }),
+    );
     app.use(hpp());
     app.use(helmet());
     app.use(compression());
@@ -54,10 +51,20 @@ export class Server {
     app.use(cookieParser());
     app.use(
       cors({
-        origin: CLIENT_URL,
+        origin: serverSchema.CLIENT_URL,
         credentials: true,
         optionsSuccessStatus: 200,
         methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+        allowedHeaders: [
+          'Origin',
+          'X-Requested-With',
+          'Content-Type',
+          'Accept',
+          'Authorization',
+          'Access-Control-Allow-Headers',
+          'Access-Control-Request-Method',
+          'Access-Control-Request-Headers',
+        ],
       }),
     );
   }
@@ -75,10 +82,10 @@ export class Server {
   }
 
   private startServer(app: Application): void {
-    logger.info(`------ NODE_ENV: ${NODE_ENV} ------`);
+    logger.info(`------ NODE_ENV: ${serverSchema.NODE_ENV} ------`);
     logger.info(`Server has started with process ${process.pid}`);
-    app.listen(PORT, () => {
-      logger.info(`Server listening on port ${PORT}`);
+    app.listen(serverSchema.PORT, () => {
+      logger.info(`Server listening on port ${serverSchema.PORT}`);
     });
   }
 
@@ -93,7 +100,7 @@ export class Server {
         },
         servers: [
           {
-            url: `${HOST}:${PORT}${BASE_URL}`,
+            url: `${serverSchema.HOST}:${serverSchema.PORT}${serverSchema.BASE_URL}`,
           },
         ],
       },
@@ -103,6 +110,8 @@ export class Server {
     const swaggerSpecs = swaggerJSDoc(options);
     this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
-    logger.info(`Docs are available at ${HOST}:${PORT}/api-docs`);
+    logger.info(
+      `Docs are available at ${serverSchema.HOST}:${serverSchema.PORT}/api-docs`,
+    );
   }
 }

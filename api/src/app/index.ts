@@ -6,6 +6,8 @@ import { Server } from '@/server';
 
 export class App {
   public init() {
+    App.handleExit();
+
     const httpServer = new Server(express());
 
     httpServer.start();

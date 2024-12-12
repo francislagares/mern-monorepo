@@ -1,10 +1,10 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vite';
 import path from 'path';
-import viteTsconfigPaths from 'vite-tsconfig-paths';
+import tsconfigPaths from 'vite-tsconfig-paths';
+import { coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  plugins: [viteTsconfigPaths()],
+  plugins: [tsconfigPaths()],
   server: {
     watch: {
       usePolling: true,
@@ -19,12 +19,12 @@ export default defineConfig({
       enabled: true,
       provider: 'v8',
       reporter: ['text', 'html'],
-      exclude: ['node_modules/'],
+      exclude: ['node_modules/', ...coverageConfigDefaults.exclude],
     },
   },
   resolve: {
     alias: {
-      '@/src': path.resolve(__dirname, './src'),
+      '@/*': path.resolve(__dirname, './src'),
     },
   },
 });

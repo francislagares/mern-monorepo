@@ -4,7 +4,7 @@ import { Page } from './Page';
 
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta = {
+const meta: Meta = {
   title: 'Example/Page',
   component: Page,
   parameters: {
@@ -23,6 +23,7 @@ export const LoggedIn: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const loginButton = canvas.getByRole('button', { name: /Log in/i });
+
     await expect(loginButton).toBeInTheDocument();
     await userEvent.click(loginButton);
     await expect(loginButton).not.toBeInTheDocument();

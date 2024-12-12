@@ -9,6 +9,11 @@ services:
       service: redis
       file: infra/docker/docker-compose-redis.yaml
 
+  redis-commander:
+    extends:
+      service: redis-commander
+      file: infra/docker/docker-compose-redis.yaml
+
   api:
     extends:
       service: api

@@ -1,39 +1,52 @@
 import Redis from 'ioredis';
 
-import { REDIS_HOST, REDIS_PORT, REDIS_TTL } from '@/config/environment';
+import logger from '@/utils/logger';
+
+import { serverSchema } from '@/config/environment';
 
 export class CacheManager {
   private redis: Redis;
 
   constructor() {
     this.redis = new Redis({
-      host: REDIS_HOST,
-      port: REDIS_PORT,
-      commandTimeout: REDIS_TTL,
+      host: serverSchema.REDIS_HOST,
+      port: serverSchema.REDIS_PORT,
+      commandTimeout: serverSchema.REDIS_TTL,
     });
   }
 
   public async getCache(key: string) {
     try {
       const cacheData = await this.redis.get(key);
+
       return cacheData;
     } catch (err) {
+      logger.info('Error getCache()', err);
+
       return null;
     }
   }
 
-  public setCache(key: string, data: unknown, ttl = REDIS_TTL) {
+  public async setCache(
+    key: string,
+    data: unknown,
+    ttl = serverSchema.REDIS_TTL,
+  ) {
     try {
-      this.redis.set(key, JSON.stringify(data), 'EX', ttl);
+      return await this.redis.set(key, JSON.stringify(data), 'EX', ttl);
     } catch (err) {
+      logger.info('Error setCache()', err);
+
       return null;
     }
   }
 
-  public removeCache(key: string) {
+  public async removeCache(key: string) {
     try {
-      this.redis.del(key);
+      return await this.redis.del(key);
     } catch (err) {
+      logger.info('Error removeCache()', err);
+
       return null;
     }
   }

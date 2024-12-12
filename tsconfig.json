@@ -38,14 +38,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "types": ["vitest/globals"],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "api/vitest.config.mts",
-    "client/vitest.config.mts",
-    "vitest.config.mts",
-    "vitest.workspace.mts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/.storybook/*"],
   "exclude": [
     "node_modules",
     "**/node_modules/*",

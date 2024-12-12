@@ -1,4 +1,14 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src"]
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ES2023",
+    "lib": ["ES2023", "dom", "dom.iterable"],
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+    "sourceMap": false
+  },
+  "include": ["api/src/**/*", "client/src/**/*"]
 }

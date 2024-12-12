@@ -9,8 +9,7 @@ This repository is built with pnpm workspaces and contains API Node.js Server an
 - Express: A Fast, unopinionated, minimalist web framework for Node.js
 - React: A JavaScript front-end library for building user interfaces
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/francislagares/mern-monorepo/tests.yaml?style=for-the-badge)
-
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/francislagares/mern-monorepo/ci.yaml?style=for-the-badge)
 
 ## Packages
 
@@ -31,29 +30,67 @@ This repository is built with pnpm workspaces and contains API Node.js Server an
 
 - [x] Pnpm workspaces
 
-## Usage
-<br />
+# Setup Instructions
+
+## 1. Running Locally
+
+To run the API locally:
+
+1. Clone the repository and install dependencies.
 
 ```sh
 # clone repository
-git clone git@github.com:francislagares/mern-monorepo.git
+git clone git@github.com:francislagares/github-org-finder.git
 
 # cd into
-cd mern-monorepo
+cd github-org-finder
 
 # install required dependencies
 pnpm install
-
-# run by
-pnpm start
 ```
+
+<br />
+
+## **Environment Variables**
+
+The API requires the following environment variables. Configure these in a `.env` or `.env.development.local` file in the api directory.
+
+```env
+GITHUB_SECRET=your_github_secret
+REDIS_HOST=localhost
+DATABASE_URL=mongodb://localhost:27017/mern_db
+CORS_ORIGIN=http://localhost:5173
+```
+
+## Running with Docker
+
+To run the API using Docker:
+
+1. Ensure Docker and Docker Compose are installed and running on your system.
+
+2. Create a `.env` or `.env.development.local` file in the api directory with the following Docker environment variables.
+
+```env
+GITHUB_SECRET=your_github_secret
+REDIS_HOST=redis
+DATABASE_URL=mongodb://mongodb:27017/mern_db
+CORS_ORIGIN=http://localhost:5173
+```
+
+3. Build and start the Docker containers:
+
+```sh
+docker-compose up --build
+```
+
+4. Verify the API is running by accessing http://localhost:4000/api/v1/health
+
 <br />
 
 ## Author
 
 - [Francis Lagares](https://www.linkedin.com/in/francislagares)
-
-<br />
+- [Portfolio](https://francislagares.vercel.app/)
 
 ## All contributions are welcome
 

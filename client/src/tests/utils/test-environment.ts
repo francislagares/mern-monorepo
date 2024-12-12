@@ -1,12 +1,11 @@
-import * as matchers from '@testing-library/jest-dom/matchers';
+import '@testing-library/jest-dom/vitest';
+import { afterEach } from 'node:test';
+
 import { cleanup } from '@testing-library/react';
-import { afterEach, beforeAll, expect, vi } from 'vitest';
+import { beforeAll, vi } from 'vitest';
 
 // mocking methods which are not implemented in JSDOM
 beforeAll(() => {
-  // extends Vitest's expect method with methods from react-testing-library
-  expect.extend(matchers);
-
   Object.defineProperty(window, 'matchMedia', {
     writable: true,
     value: vi.fn().mockImplementation(query => ({
@@ -22,7 +21,7 @@ beforeAll(() => {
   });
 });
 
-// runs a cleanup after each test case (e.g. clearing jsdom)
+// runs a cleanup after each test case (e.g. clearing jsdom || happy-dom)
 afterEach(() => {
   cleanup();
 });

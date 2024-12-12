@@ -1,31 +1,30 @@
-# dependencies
-node_modules/
-/.pnp
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+# Dependencies
+node_modules
+.pnpm-store/
+.pnp
 .pnp.js
 
-# testing
+# Testing
 videos
-/coverage
+coverage
+.nyc_output
+*.lcov
 
-# production
-build
+# Production
 dist
-logs
+build
+.next
+out
+*.tsbuildinfo
 
-# misc
-.DS_Store
+# Development
+.env
+.env.*
+!.env.example
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
-.eslintcache
 
 # Logs
 logs
@@ -33,9 +32,96 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# MongoDB replica sets
-mongodb_cluster
+# Docker
+.docker/data
+docker-compose.override.yml
 
-# Redis Volumes
-redis_data
+# IDEs and editors
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+.project
+.classpath
+*.launch
+.settings/
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+*.pem
+
+# Next.js specific
+.vercel
+.turbo
+.next
+next-env.d.ts
+
+# Nest.js specific
+/dist
+/node_modules
+
+# TypeScript
+*.tsbuildinfo
+
+# Debug
+.debug/
+
+# Cache
+.cache
+.temp
+.tmp
+*.swp
+*.swo
+
+# PM2
+.pm2/
+
+# Build artifacts
+*.zip
+*.tar.gz
+*.tgz
+
+# Temporary files
+tmp/
+temp/
+
+# Local files
+*.local
+
+# Yarn
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# PNPM
+.pnpm-debug.log
+.pnpm-store/
+
+# Misc
+.DS_Store
+*.pem
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Project specific
+public/uploads/
+uploads/
+.certificates/
+*storybook.log

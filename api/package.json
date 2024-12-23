@@ -16,7 +16,7 @@
     "seed": "ts-node --transpile-only src/prisma/seed.ts"
   },
   "dependencies": {
-    "@prisma/client": "^6.0.1",
+    "@prisma/client": "^6.1.0",
     "bcrypt": "^5.1.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
@@ -29,10 +29,10 @@
     "helmet": "^8.0.0",
     "hpp": "^0.2.3",
     "http-status-codes": "^2.2.0",
-    "ioredis": "^5.3.2",
+    "ioredis": "^5.4.2",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^6.12.0",
-    "prisma": "^6.0.1",
+    "prisma": "^6.1.0",
     "winston": "^3.17.0",
     "zod": "^3.24.1"
   },
@@ -49,7 +49,7 @@
     "@types/supertest": "^6.0.2",
     "@types/swagger-jsdoc": "^6.0.1",
     "@types/swagger-ui-express": "^4.1.7",
-    "dotenv-cli": "^7.4.4",
+    "dotenv-cli": "^8.0.0",
     "supertest": "^7.0.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1",
@@ -58,7 +58,7 @@
     "tsc-alias": "^1.8.6",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.19.2",
-    "typescript-transform-paths": "^3.5.2"
+    "typescript-transform-paths": "^3.5.3"
   },
   "config": {
     "commitizen": {

@@ -1,3 +1,5 @@
+const { env } = require('process');
+
 /**
  * @description Root PM2 configuration file for monorepo
  */
@@ -6,7 +8,8 @@ module.exports = {
     {
       name: 'api-prod',
       cwd: './api',
-      script: 'dist/app/index.js',
+      script: 'pnpm',
+      args: 'node --env-file=.env.production dist/app/index.js',
       exec_mode: 'cluster',
       instance_var: 'INSTANCE_ID',
       instances: 2,

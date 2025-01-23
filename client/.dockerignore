@@ -1,27 +1,36 @@
-# Versioning and metadata
+# Dependencies
+node_modules
+.pnpm-store
+
+# Next.js build output
+.next
+out
+
+# Testing
+coverage
+tests/
+stories/
+cypress/videos
+cypress/screenshots
+
+# Development/Environment
+.env*.local
+.env.development
+.env.test
+.env.production
+
+# Version control
 .git
 .gitignore
-.dockerignore
 
-# Build dependencies
+# IDE
+.idea
 .vscode
-dist
-logs
-/node_modules
 
-# code formatter
-.editorconfig
-.eslintignore
-.eslintrc.json
-.huskyrc
-.lintstagedrc.json
-.prettierrc
+# Misc
 README.md
-
-# test
-coverage
-vitest.config.js
-
-# docker
+*.log
+.DS_Store
+.dockerignore
 Dockerfile
-docker-compose.yaml
+docker-compose*

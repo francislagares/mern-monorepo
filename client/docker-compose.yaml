@@ -1,20 +1,26 @@
 services:
-  client:
-    container_name: client
-    image: client/v1.0.0
+  dev:
+    container_name: nextjs-dev
     build:
       context: .
-      dockerfile: Dockerfile.dev
-    networks:
-      - mern
-    ports:
-      - "5173:5173"
+      target: development
     volumes:
       - .:/app
       - /app/node_modules
-    depends_on:
-      - api
+      - /app/.next
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: pnpm dev
 
-networks:
-  mern:
-    name: mern
+  prod:
+    container_name: nextjs-prod
+    build:
+      context: .
+      target: production
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    command: npm start

@@ -37,7 +37,7 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["./src/*"],
       "vite": ["node_modules/vite"]
@@ -45,16 +45,6 @@
     "noEmit": true,
     "incremental": true
   },
-  "include": [
-    "src",
-    "cypress",
-    "**/stories",
-    ".storybook",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "vitest.config.mts"
-  ],
-  "exclude": ["node_modules", "cypress.config.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", ".next/", "cypress.config.ts"]
 }

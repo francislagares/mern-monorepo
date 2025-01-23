@@ -3,16 +3,23 @@
   "plugins": ["stylelint-a11y", "stylelint-order"],
   "rules": {
     "number-leading-zero": "never",
-    "custom-property-pattern": null,
-    "a11y/font-size-is-readable": true,
+    "selector-class-pattern": null,
     "a11y/no-text-align-justify": true,
     "a11y/no-obsolete-element": true,
     "a11y/no-obsolete-attribute": true,
     "a11y/content-property-no-static-value": true,
-    "value-keyword-case": [
-      "lower",
+    "declaration-block-trailing-semicolon": null,
+    "no-descending-specificity": null,
+    "at-rule-no-unknown": [
+      true,
       {
-        "ignoreProperties": ["left"]
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
       }
     ],
     "order/properties-order": [

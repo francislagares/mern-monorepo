@@ -1,8 +1,5 @@
 import '@testing-library/jest-dom/vitest';
-import { afterEach } from 'node:test';
-
 import { cleanup } from '@testing-library/react';
-import { beforeAll, vi } from 'vitest';
 
 // mocking methods which are not implemented in JSDOM
 beforeAll(() => {
